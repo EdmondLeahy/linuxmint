@@ -11,10 +11,13 @@ alias vc=virtual_create
 alias ve=virtual_enter
 alias vl=virtual_list
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias jpn="jupyter-notebook"
+alias jupyterize=virtual_jupyterize
+alias vlist=ls ~edmond/Documents/venv/
 # system update alias
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
-alias gimme="sudo apt install"
+alias gimme="sudo apt install -y"
 
 # FUNCTIONS
 # where command
@@ -24,7 +27,7 @@ func_where(){
 
 # create virtualenv
 virtual_create(){
-	python3 -m venv /home/edmond/Documents/venv/"$1"
+	python3.7 -m venv /home/edmond/Documents/venv/"$1"
 }
 
 virtual_enter(){
@@ -35,4 +38,6 @@ virtual_list(){
         ls /home/edmond/Documents/venv
 }
 
-
+virtual_jupyterize(){
+	python -m ipykernel install --user --name="$1"
+}
