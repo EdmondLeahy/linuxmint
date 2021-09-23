@@ -13,7 +13,9 @@ alias vl=virtual_list
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias jpn="jupyter-notebook"
 alias jupyterize=virtual_jupyterize
-alias vlist=ls ~edmond/Documents/venv/
+alias vlist="ls ~edmond/Documents/venv/"
+# Update this bash alias in the github directory
+alias upalias="cp /home/edmond/.bash_aliases /home/edmond/Downloads/linuxmint/.bash_aliases"
 # system update alias
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
